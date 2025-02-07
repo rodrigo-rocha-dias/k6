@@ -1,0 +1,69 @@
+param (
+    [string]$VUs = "1",
+    [string]$Duration = "5s",
+    [string]$TESTS = "1",
+    [int]$Iterations = 1,
+    [string]$Release = "placeholder",
+    [string]$Ambiente = "HML"
+)
+
+$PATH = Get-Location
+$FolderName = "$PATH\reports"
+
+# Criar a pasta reports caso não exista
+if (-Not (Test-Path $FolderName)) {
+    New-Item $FolderName -ItemType Directory
+    Write-Host "Folder Created successfully" -ForegroundColor Green
+} else {
+    Write-Host "Folder Exists" -ForegroundColor Yellow
+}
+
+$ConfigFile = "$PATH\config.json"
+
+# Criar config.json caso não exista
+if (-Not (Test-Path $ConfigFile)) {
+    Write-Host "Config file not found! Creating default config.json" -ForegroundColor Yellow
+    $defaultConfig = @{
+        vus        = [int]$VUs
+        iterations = $Iterations
+        duration   = $Duration
+        nome_teste = $TESTS
+        release    = $Release
+        ambiente   = $Ambiente
+    } | ConvertTo-Json -Depth 3
+    $defaultConfig | Set-Content -Path $ConfigFile
+}
+
+# Carregar configurações
+$Config = Get-Content -Path $ConfigFile | ConvertFrom-Json
+$env:TESTS = $Config.nome_teste 
+
+# Gerar nomes dos arquivos
+$time = Get-Date -Format "yyyyMMdd_HHmmss"
+$LogFile = "$FolderName\test_$time.log"
+$ReportFile = "$FolderName\test_$time.json"
+$FilteredReportFile = "$FolderName\test_$time.filtered.json"
+
+# Verificar se o script do K6 existe
+$K6Script = "$PATH\scripts\placeholder\resources.js"
+if (-Not (Test-Path $K6Script)) {
+    Write-Host "Erro: O script do K6 não foi encontrado em $K6Script" -ForegroundColor Red
+    exit 1
+}
+
+Write-Host "Running K6 test with $($Config.vus) VUs for $($Config.duration) and TESTS $env:TESTS" -ForegroundColor Cyan
+k6 run $K6Script --vus $($Config.vus) --duration $($Config.duration) --out json=$ReportFile | Tee-Object -FilePath $LogFile
+Write-Host "Test completed. Logs saved at $LogFile" -ForegroundColor Green
+
+if (Test-Path ".\filter-log.ps1") {
+    .\filter-log.ps1 -InputFile $ReportFile -OutputFile $FilteredReportFile
+    Write-Host "Filtered logs saved at $FilteredReportFile" -ForegroundColor Green
+} else {
+    Write-Host "Warning: filter-log.ps1 script not found. Skipping log filtering." -ForegroundColor Yellow
+}
+
+if (Test-Path $FilteredReportFile) {
+    $FilteredResults = Get-Content -Path $FilteredReportFile | ConvertFrom-Json
+    Write-Host "Resumo do Teste: " -ForegroundColor Cyan
+    Write-Host "VUs: $($Config.vus), Duration: $($Config.duration), Teste: $env:TESTS" -ForegroundColor White
+}
