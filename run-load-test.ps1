@@ -9,6 +9,9 @@ param (
 
 $PATH = Get-Location
 $FolderName = "$PATH\reports"
+$LogFolder = "$FolderName\logs"
+
+Write-Host "Iniciando script run-load-test.ps1..."
 
 # Criar a pasta reports caso não exista
 if (-Not (Test-Path $FolderName)) {
@@ -18,21 +21,27 @@ if (-Not (Test-Path $FolderName)) {
     Write-Host "Folder Exists" -ForegroundColor Yellow
 }
 
+# Criar a pasta logs caso não exista
+if (-Not (Test-Path $LogFolder)) {
+    New-Item $LogFolder -ItemType Directory
+    Write-Host "Log Folder Created successfully" -ForegroundColor Green
+} else {
+    Write-Host "Log Folder Exists" -ForegroundColor Yellow
+}
+
 $ConfigFile = "$PATH\config.json"
 
 # Criar config.json caso não exista
-if (-Not (Test-Path $ConfigFile)) {
-    Write-Host "Config file not found! Creating default config.json" -ForegroundColor Yellow
-    $defaultConfig = @{
-        vus        = [int]$VUs
-        iterations = $Iterations
-        duration   = $Duration
-        nome_teste = $TESTS
-        release    = $Release
-        ambiente   = $Ambiente
-    } | ConvertTo-Json -Depth 3
-    $defaultConfig | Set-Content -Path $ConfigFile
-}
+Write-Host "Atualizando o arquivo config.json com os novos parâmetros"
+$defaultConfig = @{
+    vus        = [int]$VUs
+    iterations = $Iterations
+    duration   = $Duration
+    nome_teste = $TESTS
+    release    = $Release
+    ambiente   = $Ambiente
+} | ConvertTo-Json -Depth 3
+$defaultConfig | Set-Content -Path $ConfigFile
 
 # Carregar configurações
 $Config = Get-Content -Path $ConfigFile | ConvertFrom-Json
@@ -40,9 +49,10 @@ $env:TESTS = $Config.nome_teste
 
 # Gerar nomes dos arquivos
 $time = Get-Date -Format "yyyyMMdd_HHmmss"
-$LogFile = "$FolderName\test_$time.log"
+$LogFile = "$LogFolder\test_$time.log"
 $ReportFile = "$FolderName\test_$time.json"
 $FilteredReportFile = "$FolderName\test_$time.filtered.json"
+$HtmlReportFile = "$FolderName\test_$time.html"
 
 # Verificar se o script do K6 existe
 $K6Script = "$PATH\scripts\placeholder\resources.js"
@@ -63,7 +73,9 @@ if (Test-Path ".\filter-log.ps1") {
 }
 
 if (Test-Path $FilteredReportFile) {
-    $FilteredResults = Get-Content -Path $FilteredReportFile | ConvertFrom-Json
-    Write-Host "Resumo do Teste: " -ForegroundColor Cyan
-    Write-Host "VUs: $($Config.vus), Duration: $($Config.duration), Teste: $env:TESTS" -ForegroundColor White
+    Write-Host "Gerando relatório HTML..." -ForegroundColor Cyan
+    .\generate-html-report.ps1 -InputFile $FilteredReportFile -OutputFile $HtmlReportFile
+    Write-Host "Relatório HTML gerado em $HtmlReportFile" -ForegroundColor Green
+} else {
+    Write-Host "Warning: Filtered report file not found. Skipping HTML report generation." -ForegroundColor Yellow
 }
