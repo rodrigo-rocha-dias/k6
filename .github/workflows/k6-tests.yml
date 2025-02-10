@@ -1,0 +1,33 @@
+name: Run K6 Load Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Permite execução manual
+
+jobs:
+  k6-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar K6
+        run: |
+          sudo apt update
+          sudo apt install -y k6
+
+      - name: Executar testes de carga com K6
+        run: k6 run scripts/placeholder/resources.js --vus 500 --duration 5m
+
+      - name: Upload de relatórios
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-reports
+          path: reports/
