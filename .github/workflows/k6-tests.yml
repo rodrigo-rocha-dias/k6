@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch: # Permite execução manual
+  workflow_dispatch:
 
 jobs:
   k6-test:
@@ -17,17 +17,18 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Instalar K6
-        run: |
-          sudo apt update
-          sudo apt install -y k6
+      - name: Instalar K6 via snap
+        run: sudo snap install k6
+
+      - name: Criar diretório de relatórios
+        run: mkdir -p reports/logs
 
       - name: Executar testes de carga com K6
-        run: k6 run scripts/placeholder/resources.js --vus 500 --duration 5m
+        run: k6 run scripts/placeholder/resources.js --vus 500 --duration 5m --out json=reports/test_$(date +%Y%m%d_%H%M%S).json
 
       - name: Upload de relatórios
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: k6-reports
-          path: reports/
+          path: reports/**/*

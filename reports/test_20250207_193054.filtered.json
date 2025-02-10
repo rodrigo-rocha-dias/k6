@@ -1,0 +1,326 @@
+[
+    {
+        "time":  "2025-02-07T19:30:54.7749225-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:54.7749225-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:54.7975682-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:54.7975682-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:54.9454959-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:54.9454959-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:55.9693646-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:55.9693646-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:55.9912839-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:55.9912839-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:56.1370008-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:56.1370008-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.180195-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.180195-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.2048565-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.2048565-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.3488825-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:57.3488825-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.4063885-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.4063885-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.4313548-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.4313548-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.5766988-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:58.5766988-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.6033757-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.6033757-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.6302137-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.6302137-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.7842403-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:30:59.7842403-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.8068628-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.8068628-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.8285755-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.8285755-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.9728283-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:00.9728283-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:01.9990638-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:01.9990638-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:02.0252439-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:02.0252439-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:02.1654349-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:02.1654349-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.1855337-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.1855337-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.2094106-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.2094106-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.3569884-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:03.3569884-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.380205-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.380205-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.4037753-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.4037753-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts/1",
+        "status":  "200",
+        "method":  "GET"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.5681991-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    },
+    {
+        "time":  "2025-02-07T19:31:04.5681991-03:00",
+        "url":  "https://jsonplaceholder.typicode.com/posts",
+        "status":  "201",
+        "method":  "POST"
+    }
+]

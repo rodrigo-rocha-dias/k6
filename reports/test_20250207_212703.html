@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relatório de Testes K6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .summary-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .summary-box {
+            width: 20%;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .summary-box.green {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .summary-box.red {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relatório de Testes K6</h1>
+    <div class="summary-boxes">
+        <div class="summary-box green">
+            <h2>Total Requests</h2>
+            <p>10</p>
+        </div>
+        <div class="summary-box green">
+            <h2>Passed Checks</h2>
+            <p>10</p>
+        </div>
+        <div class="summary-box red">
+            <h2>Failed Requests</h2>
+            <p>0</p>
+        </div>
+        <div class="summary-box red">
+            <h2>Breached Thresholds</h2>
+            <p>0</p>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Method</th>
+            <th>Status</th>
+            <th>URL</th>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:04.3378175-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:04.3378175-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:05.3721187-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:05.3721187-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:06.4186207-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:06.4186207-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:07.4788075-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:07.4788075-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:08.5055237-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>        <tr>
+            <td>2025-02-07T21:27:08.5055237-03:00</td>
+            <td>GET</td>
+            <td>200</td>
+            <td>https://jsonplaceholder.typicode.com/posts</td>
+        </tr>    </table>
+</body>
+</html>

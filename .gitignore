@@ -1,5 +1,8 @@
-/reports/*.*
-/reports/
+# Permitir apenas arquivos de relatório específicos
+!/reports/*.json
+!/reports/*.html
+!/reports/*.log
+
 # Compiled class file
 *.class
 
