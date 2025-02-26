@@ -45,17 +45,18 @@ K6/
 ### 2️⃣ Configuração do Teste
 
 
-```
 Há duas formas de definir os parâmetros dos testes:
 
-Método 1: Via config.json (método padrão)
-Método 2: Via run-load-test.ps1 (sobrescreve configurações do config.json)
+- Método 1️⃣: Via config.json (método padrão)
+
+- Método 2️⃣: Via run-load-test.ps1 (sobrescreve configurações do config.json)
 
 
-```
-📌 Método 1: Configurar via config.json
+📌 Método 1️⃣: Configurar via config.json
+
 Edite o arquivo config.json conforme necessário:
 
+```
 {
     "vus": 10,
     "duration": "30s",
@@ -64,10 +65,13 @@ Edite o arquivo config.json conforme necessário:
     "nome_teste": "1,2",
     "ambiente": "HML"
 }
+```
 
-📌 Método 2: Configurar via run-load-test.ps1
+📌 Método 2️⃣: Configurar via run-load-test.ps1
+
 Se preferir, você pode definir os parâmetros diretamente ao executar o script:
 
+```
 .\run-load-test.ps1 
 -VUs 10 
 -Duration "30s" 
@@ -75,7 +79,10 @@ Se preferir, você pode definir os parâmetros diretamente ao executar o script:
 -Release "placeholder" 
 -Ambiente "HML" 
 -TESTS "1,2"
+```
 
+
+```
 param (
     [string]$VUs = "10",               # Número de usuários virtuais
     [string]$Duration = "30s",         # Duração do teste
@@ -84,6 +91,7 @@ param (
     [string]$Release = "placeholder",  # Nome da release/teste
     [string]$Ambiente = "HML"          # Ambiente de execução (HML, PRD, DEV)
 )
+```
 
 Importante: Se você executar run-load-test.ps1 sem parâmetros, ele usará os valores do config.json.
 
@@ -95,12 +103,11 @@ Após a execução do teste, os relatórios serão gerados na pasta reports/.
 1️⃣ Relatório em JSON
 O K6 gera um arquivo JSON contendo os resultados do teste, que pode ser analisado manualmente ou convertido para HTML.
 
-
 2️⃣ Gerando Relatório em HTML
 Para gerar um relatório visual a partir do JSON gerado, execute:
-
+```
 .\generate-html-report.ps1 -InputFile "reports/test_20250226.json" -OutputFile "reports/test_20250226.html"
-
+```
 Nota: Substitua "test_20250226.json" pelo nome real do arquivo gerado.
 
 
@@ -131,13 +138,13 @@ Os principais indicadores de desempenho incluem:
 
 
 🎯 Como analisar?
-1️⃣ Se http_req_duration estiver muito alto, o tempo de resposta do servidor pode estar ruim.
-2️⃣ Se http_req_failed for maior que 0%, houve falhas nas requisições, indicando possíveis erros no servidor.
-3️⃣ Se vus_max for menor do que o esperado, pode haver um gargalo impedindo mais usuários simultâneos.
-4️⃣ Se http_req_duration{p(90)} e http_req_duration{p(95)} forem altos, significa que 90% ou 95% das requisições estão demorando demais.
+- 1️⃣ Se http_req_duration estiver muito alto, o tempo de resposta do servidor pode estar ruim.
+- 2️⃣ Se http_req_failed for maior que 0%, houve falhas nas requisições, indicando possíveis erros no servidor.
+- 3️⃣ Se vus_max for menor do que o esperado, pode haver um gargalo impedindo mais usuários simultâneos.
+- 4️⃣ Se http_req_duration{p(90)} e http_req_duration{p(95)} forem altos, significa que 90% ou 95% das requisições estão demorando demais.
 
 
-### 4️⃣ Gerando Relatório
+### 3️⃣ Gerando Relatório
 
 Após a execução dos testes, um relatório JSON será salvo na pasta `reports/`. Para gerar um relatório HTML, execute:
 ```powershell
