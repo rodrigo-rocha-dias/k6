@@ -1,8 +1,8 @@
 {
-    "vus":  1,
+    "vus":  10,
     "release":  "placeholder",
-    "duration":  "5s",
-    "iterations":  1,
-    "nome_teste":  "1",
+    "duration":  "5m",
+    "iterations":  10,
+    "nome_teste":  "1,2,3,4,5,6,7,8",
     "ambiente":  "HML"
 }

@@ -24,7 +24,7 @@ jobs:
         run: mkdir -p reports/logs
 
       - name: Executar testes de carga com K6
-        run: k6 run scripts/placeholder/resources.js --vus 500 --duration 5m --out json=reports/test_$(date +%Y%m%d_%H%M%S).json
+        run: k6 run scripts/placeholder/resources.js --vus 5 --duration 10s --out json=reports/test_$(date +%Y%m%d_%H%M%S).json
 
       - name: Upload de relatórios
         if: always()

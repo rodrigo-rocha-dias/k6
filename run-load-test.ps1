@@ -1,8 +1,8 @@
 param (
-    [string]$VUs = "1",
-    [string]$Duration = "5s",
-    [string]$TESTS = "1",
-    [int]$Iterations = 1,
+    [string]$VUs = "10",
+    [string]$Duration = "5m",
+    [string]$TESTS = "1,2,3,4,5,6,7,8",
+    [int]$Iterations = 10,
     [string]$Release = "placeholder",
     [string]$Ambiente = "HML"
 )
