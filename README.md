@@ -39,8 +39,70 @@ K6/
 ## 🚀 Como Executar os Testes
 
 ### 1️⃣ Pré-requisitos
-- Ter o [K6](https://k6.io/docs/getting-started/installation/) instalado na máquina.
-- Ter o Node.js instalado (caso precise de bibliotecas adicionais).
+
+- ✅ Ter o [K6](https://k6.io/docs/getting-started/installation/) instalado na máquina.
+- ✅ Ter o Node.js instalado (caso precise de bibliotecas adicionais).
+
+---
+
+### 🛠️ Instalação do K6 no Windows
+
+#### 📦 Opção 1: Instalar via Chocolatey (recomendado)
+
+Se você já tem o [Chocolatey](https://chocolatey.org/install) instalado:
+
+```powershell
+choco install k6 -y
+
+Ou rode no PowerShell como administrador.
+
+✅ Verifique se a instalação foi concluída:
+k6 version
+
+💡 Como instalar o Chocolatey (caso não tenha)
+Abra o PowerShell como administrador e execute:
+
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+🔍 Verifique se foi instalado corretamente:
+```
+choco -v
+```
+
+📂 Opção 2: Instalação manual (sem Chocolatey)
+Acesse: Releases do K6
+Baixe o .zip da versão Windows (ex: k6-vX.X.X-windows-amd64.zip)
+Extraia os arquivos para uma pasta de sua preferência, por exemplo:
+C:\Tools\k6
+
+Adicione essa pasta ao PATH do sistema:
+Vá em Painel de Controle > Sistema > Configurações avançadas do sistema
+Clique em Variáveis de Ambiente
+
+Em Path, clique em Editar e adicione:
+```
+C:\Tools\k6
+```
+
+Reinicie o terminal/VSCode
+
+✅ Verifique se o K6 está funcionando:
+```
+k6 version
+```
+
+
+✅ Verificação de Instalação
+Se tiver problemas com o comando k6, verifique onde o executável está localizado:
+```
+Get-ChildItem -Path "C:\" -Recurse -Filter "k6.exe" -ErrorAction SilentlyContinue -Force
+```
+
 
 ### 2️⃣ Configuração do Teste
 
